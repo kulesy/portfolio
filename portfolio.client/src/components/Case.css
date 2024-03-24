@@ -1,0 +1,35 @@
+
+.portfolio__case {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.portfolio__case__image-container {
+    width: 100%;
+    height: calc(100vh - 60px - 2em);
+    max-width: min(800px, 100%);
+    overflow: hidden;
+}
+
+.portfolio__case__image-container__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 0%;
+    border-radius: 5px;
+}
+
+.portfolio__case__content {
+    flex: 1 1 300px;
+    max-width: 100%;
+    padding: 1.5em 1em;
+    background-color: var(--primary-colour);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 992px) {
+    img.portfolio__case__image-container__image {
+        width: 100%;
+    }
+}

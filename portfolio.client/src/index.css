@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --primary-colour: #EDEDED;
+  --secondary-colour: #18359A;
+  --accent-colour: #A290D8;
+  --primary-font: 'Poppins';
+  --secondary-font: 'Roboto';
+}
+
+#root {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+button {
+  all: unset;
+}
+
+.button-primary,
+.button-secondary {
+    padding: 0.25em 4em;
+    background: var(--accent-colour);
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5em;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 3px solid var(--accent-colour)
+}
+
+
+.button-primary:hover,
+.button-primary:focus,
+.button-secondary:hover,
+.button-secondary:focus {
+    box-shadow: inset 0 0 0 2000px rgba(37, 37, 37, 0.5);
+}
+
+/* This styles the scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+  height: 8px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #575757; /* color of the scroll thumb */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scroll thumb on hover */
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6, body label, body p, body ul, body li, body a {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-family: var(--primary-font);
+}
+
+h2, h3, h4, h5, h6, p, label, a {
+  font-family: var(--secondary-font);
+}
+
+body a {
+  text-decoration: none;
+  color: inherit;
+}

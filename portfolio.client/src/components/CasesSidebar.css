@@ -1,0 +1,72 @@
+.portfolio__cases-sidebar {
+    max-height: 100%;
+    padding: 0em 0.5em;
+    overflow: auto;
+}
+
+img.portfolio__cases-sidebar__logo {
+    max-width: 100%;
+    padding: 0em 4em;
+}
+
+.portfolio__cases-sidebar__content {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0.25em;
+    overflow: auto;
+}
+
+.portfolio__cases-sidebar__content__case {
+    position: relative;
+    min-height: 15em;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.portfolio__cases-sidebar__content__case.active {
+    box-shadow: 0px 0px 6px 0px var(--accent-colour) ;
+    outline: 1px solid rgba(255, 255, 255, 0.473);
+}
+
+img.portfolio__cases-sidebar__content__case__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+h6.portfolio__cases-sidebar__content__case__name {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    text-align: center;
+    background-color: rgba(12, 11, 34, 0.733);
+    color: white
+}
+
+.portfolio__cases-sidebar__content__case.active h6.portfolio__cases-sidebar__content__case__name {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+    .portfolio__cases-sidebar {
+        display: none;
+    }
+}
