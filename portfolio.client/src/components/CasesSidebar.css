@@ -31,7 +31,7 @@ img.portfolio__cases-sidebar__logo {
 }
 
 .portfolio__cases-sidebar__content__case.active {
-    box-shadow: 0px 0px 6px 0px var(--accent-colour) ;
+    box-shadow: 0px 0px 6px 0px var(--accent-colour);
     outline: 1px solid rgba(255, 255, 255, 0.473);
 }
 
@@ -62,6 +62,7 @@ h6.portfolio__cases-sidebar__content__case__name {
 }
 
 .portfolio__cases-sidebar__content__case.active h6.portfolio__cases-sidebar__content__case__name {
+    color: var(--accent-colour);
     font-weight: 700;
 }
 

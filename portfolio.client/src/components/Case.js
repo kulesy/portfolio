@@ -1,14 +1,22 @@
 import "./Case.css";
 import Spinner from "react-bootstrap/Spinner";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ApiConsts from "../consts/ApiConsts";
+import Lightbox from "./Lightbox";
+import React, { useState } from "react";
 
 function Case({ caseModel }) {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
   const caseContent = (
     <div className="portfolio__case" id={`case-${caseModel?.CaseID}`}>
-      <div className="portfolio__case__image-container">
+      <div
+        className="portfolio__case__image-container"
+        onClick={() => setIsLightboxOpen(true)}
+      >
         <img
           className="portfolio__case__image-container__image"
-          src={`https://localhost:3001/api/caseimages/blob/${caseModel?.CaseImageIds[0]}`}
+          src={`${ApiConsts.ImageDownloadApi}/${caseModel?.CaseImageIds[0]}`}
         ></img>
       </div>
       <div className="portfolio__case__content">
@@ -19,6 +27,13 @@ function Case({ caseModel }) {
           dangerouslySetInnerHTML={{ __html: caseModel?.CaseDescription }}
         ></div>
       </div>
+      {isLightboxOpen && (
+        <Lightbox
+          key={isLightboxOpen}
+          imageIds={caseModel.CaseImageIds}
+          closeEventCallback={() => setIsLightboxOpen(false)}
+        ></Lightbox>
+      )}
     </div>
   );
 

@@ -1,6 +1,7 @@
 import "./Portfolio.css";
 import Cases from "./components/Cases";
 import Home from "./components/Home";
+import About from "./components/About";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import logo from "./logo.png";
 
@@ -25,6 +26,7 @@ function Portfolio() {
           <Route path="/cases" element={<Cases />} />
           <Route path="/cases/:caseId" element={<Cases />} />
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </div>

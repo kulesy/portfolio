@@ -1,0 +1,124 @@
+.portfolio__about {
+    display: grid;
+    grid-template-areas:
+        'header info'
+        'content content';
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 250px 1fr;
+    padding: 1em;
+    height: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.portfolio__about__header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas:
+        'image heading'
+        'image socials';
+    column-gap: 2em;
+    align-items: center;
+    padding-right: 1em;
+}
+
+.portfolio__about__header__image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    grid-area: image;
+    overflow: hidden;
+}
+
+img.portfolio__about__header__image-container__image {
+    width: 210px;
+    height: 240px;
+    transform: translate(-10px, 0px);
+    object-fit: cover;
+}
+
+.portfolio__about__header__heading {
+    color: white;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: heading;
+    align-self: flex-end;
+}
+
+.portfolio__about__header__socials {
+    grid-area: socials;
+    display: flex;
+    color: white;
+    font-size: 2.5em;
+    gap: .5em;
+    align-self: flex-start;
+}
+
+.portfolio__about__header__socials__icon {
+    cursor: pointer;
+}
+
+.portfolio__about__header__socials__icon:hover,
+ .portfolio__about__header__socials__icon:focus {
+    color: gray;
+}
+
+.portfolio__about__info {
+    grid-area: info;
+    display: flex;
+    gap: 1em;
+    margin-left: auto;
+    overflow-x: scroll;
+    width: 100%;
+    min-height: 16em;
+    padding-bottom: .5em;
+}
+
+.portfolio__about__content {
+    grid-area: content;
+    border: 1px solid white;
+    margin-top: 1em;
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    color: white;
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.portfolio__about__info__section {
+    height: 100%;
+    min-width: 15em;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.portfolio__about__info__section > h4 {
+    margin-bottom: .25em;
+}
+
+.portfolio__about__info__section ul {
+    padding-left: 1.5em;
+}
+
+@media screen and (max-width: 1200px) {
+    .portfolio__about {
+        grid-template-areas:
+            'header'
+            'info'
+            'content';
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 250px 1fr;
+    }
+
+    .portfolio__about__content {
+        overflow: initial;
+    }
+
+}

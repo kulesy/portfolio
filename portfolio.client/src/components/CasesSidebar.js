@@ -3,6 +3,7 @@ import Spinner from "react-bootstrap/Spinner";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import ApiConsts from "../consts/ApiConsts"
 
 function CasesSidebar({
   cases,
@@ -58,7 +59,7 @@ function CasesSidebar({
         >
           <img
             className="portfolio__cases-sidebar__content__case__image"
-            src={`https://localhost:3001/api/caseimages/blob/${caseContent?.CaseImageIds[0]}`}
+            src={`${ApiConsts.ImageDownloadApi}/${caseContent?.CaseImageIds[0]}`}
             alt={caseContent.CaseName}
           />
           <h6 className="portfolio__cases-sidebar__content__case__name">

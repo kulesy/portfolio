@@ -18,6 +18,7 @@
     object-fit: cover;
     object-position: 50% 0%;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .portfolio__case__content {
