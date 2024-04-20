@@ -1,6 +1,7 @@
 class Controller {
   start() {
     const express = require("express");
+    const awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
     const cors = require("cors");
     const fs = require("fs");
     const path = require("path");
@@ -18,6 +19,9 @@ class Controller {
     const httpsServer = https.createServer(credentials, app);
 
     app.use(express.json()); // Middleware to parse JSON bodies
+
+    // AWS Serverless Express middleware to handle event and context
+    app.use(awsServerlessExpressMiddleware.eventContext());
 
     // Allow requests from a specific origin
     app.use(cors());
