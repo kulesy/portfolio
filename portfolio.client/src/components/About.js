@@ -1,7 +1,7 @@
 import "./About.css";
 import profilePhoto from "../images/1D5A0696.jpg";
 import { BsTwitterX } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function About() {
   return (
@@ -33,6 +33,14 @@ function About() {
             rel="noopener noreferrer"
           >
             <BsTwitterX></BsTwitterX>
+          </a>
+          <a
+            className="portfolio__about__header__socials__icon"
+            href="https://www.linkedin.com/in/elijah-kent-062254202/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin></FaLinkedin>
           </a>
         </div>
       </div>
@@ -81,16 +89,23 @@ function About() {
           doing programming as a hobby for almost four years now.
           <br></br> <br></br>
           Most my work experience highly involves .NET Technologies (Blazor,
-          .NET Web APIs, Entity Framework) SQL Server, and a little bit of
-          Javascript. I also have a couple websites that I am actively managing
-          as a freelancer.
+          .NET Web APIs, Entity Framework) and SQL Server. I also have a couple
+          websites that I am actively managing as a freelancer (One made using
+          webflow and the other using purely HTML/CSS/Javascript).
           <br></br> <br></br>
           As a hobbyist, however, I have been exploring other languages and
-          technologies. This portfolio for example is made with React and
-          Express, where I have found my skills in full stack development using
-          .NET easily transferrable to Javascript Frameworks. As React is the
-          standard framework for most modern web applications I am looking
-          develop my experience in that field.
+          technologies. This{" "}
+          <a
+            href="https://github.com/kulesy/portfolio"
+            style={{ textDecoration: "underline" }}
+          >
+            portfolio
+          </a>{" "}
+          for example is made with React and Express, where I have found my
+          skills in full stack development using .NET easily transferrable to
+          Javascript Frameworks. As React is the standard framework for most
+          modern web applications I am looking develop my experience in that
+          field.
           <br></br> <br></br>I have also been tinkering with python and pygame
           which I have been using to explore more into game development. You can
           check it out on my{" "}

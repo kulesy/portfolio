@@ -2,11 +2,23 @@ import "./Portfolio.css";
 import Cases from "./components/Cases";
 import Home from "./components/Home";
 import About from "./components/About";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import logo from "./logo.png";
 
 function Portfolio() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  function GetClasses(path) {
+    let classes = "portfolio__nav__content__item";
+
+    if (location.pathname.includes(path)) {
+      classes += " active";
+    }
+
+    return classes;
+  }
+
   return (
     <div className="portfolio">
       <div className="portfolio__nav">
@@ -16,8 +28,11 @@ function Portfolio() {
           onClick={() => navigate("/")}
         />
         <div className="portfolio__nav__content">
-          <a className="portfolio__nav__content__item" href="/cases">
+          <a className={GetClasses("/cases")} href="/cases">
             Cases
+          </a>
+          <a className={GetClasses("/about")} href="/about">
+            About
           </a>
         </div>
       </div>

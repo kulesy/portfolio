@@ -20,6 +20,21 @@
 
 .portfolio__case__content__heading {
     padding-bottom: .25em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.portfolio__case__content__heading__link {
+    font-size: 1.5em;
+    display: flex;
+    padding-bottom: .25em;
+    cursor: pointer;
+}
+
+.portfolio__case__content__heading__link:hover,
+.portfolio__case__content__heading__link:focus {
+    color: gray;
 }
 
 @media screen and (max-width: 992px) {

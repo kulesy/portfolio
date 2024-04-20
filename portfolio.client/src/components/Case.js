@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ApiConsts from "../consts/ApiConsts";
 import Lightbox from "./Lightbox";
 import React, { useState } from "react";
+import { LuExternalLink } from "react-icons/lu";
 
 function Case({ caseModel }) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -20,9 +21,15 @@ function Case({ caseModel }) {
         ></img>
       </div>
       <div className="portfolio__case__content">
-        <h3 className="portfolio__case__content__heading">
-          {caseModel?.CaseName}
-        </h3>
+        <div className="portfolio__case__content__heading">
+          <h3>{caseModel?.CaseName}</h3>
+          <a
+            className="portfolio__case__content__heading__link"
+            href={caseModel?.CaseLink}
+          >
+            <LuExternalLink></LuExternalLink>
+          </a>
+        </div>
         <div
           dangerouslySetInnerHTML={{ __html: caseModel?.CaseDescription }}
         ></div>
