@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { getCases } from "../clients/ApiClient";
 import Spinner from "react-bootstrap/Spinner";
 import { useNavigate } from "react-router-dom";
+import ApiConsts from "../consts/ApiConsts";
 
 function Home() {
   const [data, setData] = useState(null);
@@ -37,7 +38,7 @@ function Home() {
         >
           <img
             className="portfolio__home__content__showcase__case__image"
-            src={`https://localhost:3001/api/caseimages/blob/${caseContent?.CaseImageIds[0]}`}
+            src={`${ApiConsts.ImageDownloadApi}/${caseContent?.CaseImageIds[0]}`}
             alt={caseContent.CaseName}
           />
         </div>

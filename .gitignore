@@ -4,3 +4,4 @@ portfolio.client/build
 portfolio.server/images/
 server.cert
 server.key
+.env.*

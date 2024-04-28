@@ -1,6 +1,6 @@
-// Constants.js
 const Constants = {
-  ImageDownloadApi: "https://localhost:3001/api/caseimages/blob",
+  BaseUrl: process.env.REACT_APP_API_URL,
+  ImageDownloadApi: `${process.env.REACT_APP_API_URL}/caseimages/blob`,
 };
 
 export default Constants;
