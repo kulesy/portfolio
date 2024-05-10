@@ -26,6 +26,8 @@ function Case({ caseModel }) {
           <a
             className="portfolio__case__content__heading__link"
             href={caseModel?.CaseLink}
+            target="_blank"
+            rel="noopener norefferer"
           >
             <LuExternalLink></LuExternalLink>
           </a>
