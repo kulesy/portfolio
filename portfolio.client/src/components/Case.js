@@ -50,9 +50,22 @@ function Case({ caseModel }) {
     return caseContent;
   } else {
     return (
-      <Spinner>
-        <span className="visually-hidden">Loading...</span>
-      </Spinner>
+      <div className="portfolio__case">
+        <div className="portfolio__case__image-container">
+          <div className="portfolio__case__spinner" style={{ color: "white" }}>
+            <Spinner>
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          </div>
+        </div>
+        <div className="portfolio__case__content">
+          <div className="portfolio__case__spinner">
+            <Spinner>
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          </div>
+        </div>
+      </div>
     );
   }
 }
