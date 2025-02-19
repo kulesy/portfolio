@@ -82,7 +82,7 @@ function About() {
         <p>
           Hello and welcome to my portfolio.
           <br></br> <br></br>I am a full stack software developer from
-          Christchurch, New Zealand.
+          Melbourne, Australia.
           <br></br> <br></br>
           Software development is my passion which just so happens to be my job.
           I have two years total of professional development but I have been
@@ -106,15 +106,6 @@ function About() {
           Javascript Frameworks. As React is the standard framework for most
           modern web applications I am looking develop my experience in that
           field.
-          <br></br> <br></br>I have also been tinkering with python and pygame
-          which I have been using to explore more into game development. You can
-          check it out on my{" "}
-          <a
-            href="https://github.com/kulesy/Skeleton-Game"
-            style={{ textDecoration: "underline" }}
-          >
-            GitHub
-          </a>
           .
         </p>
       </div>
